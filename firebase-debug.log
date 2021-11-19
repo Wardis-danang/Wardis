@@ -1,0 +1,89 @@
+[debug] [2021-11-19T10:01:28.802Z] ----------------------------------------------------------------------
+[debug] [2021-11-19T10:01:28.806Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-11-19T10:01:28.807Z] CLI Version:   9.23.0
+[debug] [2021-11-19T10:01:28.807Z] Platform:      win32
+[debug] [2021-11-19T10:01:28.807Z] Node Version:  v16.13.0
+[debug] [2021-11-19T10:01:28.808Z] Time:          Fri Nov 19 2021 17:01:28 GMT+0700 (Indochina Time)
+[debug] [2021-11-19T10:01:28.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-19T10:01:28.915Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-19T10:01:28.915Z] > authorizing via signed-in user (levanhuyha16@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\This PC\Desktop\New folder
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using git-danang. 
+[debug] [2021-11-19T10:09:47.328Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/git-danang [none]
+[debug] [2021-11-19T10:09:47.952Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/git-danang 403
+[debug] [2021-11-19T10:09:47.952Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/git-danang {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-11-19T10:09:47.953Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-11-19T10:09:48.123Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project git-danang. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-11-19T10:13:31.311Z] ----------------------------------------------------------------------
+[debug] [2021-11-19T10:13:31.315Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-19T10:13:31.316Z] CLI Version:   9.23.0
+[debug] [2021-11-19T10:13:31.316Z] Platform:      win32
+[debug] [2021-11-19T10:13:31.316Z] Node Version:  v16.13.0
+[debug] [2021-11-19T10:13:31.317Z] Time:          Fri Nov 19 2021 17:13:31 GMT+0700 (Indochina Time)
+[debug] [2021-11-19T10:13:31.318Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-19T10:13:31.396Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-19T10:13:31.397Z] > authorizing via signed-in user (levanhuyha16@gmail.com)
+[debug] [2021-11-19T10:13:31.397Z] [iam] checking project git-danang for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-19T10:13:31.400Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-19T10:13:31.401Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-19T10:13:31.584Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 19 Nov 2021 10:13:36 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-19T10:13:31.680Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/git-danang:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-11-19T10:13:32.858Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 19 Nov 2021 10:13:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1025","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-19T10:13:32.860Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project git-danang:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2021-11-19T10:13:32.861Z] > refreshing access token with scopes: []
+[debug] [2021-11-19T10:13:32.862Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-19T10:13:33.008Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Fri, 19 Nov 2021 10:13:37 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-19T10:13:33.076Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/git-danang [none]
+[debug] [2021-11-19T10:13:33.753Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/git-danang 403
+[debug] [2021-11-19T10:13:33.754Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/git-danang {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-11-19T10:13:33.754Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-11-19T10:13:33.928Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\This PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project git-danang. Please make sure the project exists and your account has permission to access it.
